@@ -1,0 +1,19 @@
+[Database] 
+   ↓
+[Patient EHR]
+   ↓
+[Preprocess EHR]
+   ↓
+[NER on EHR]
+   ↓
+[EHR Terminology Mapping] ←──┐
+                             │
+         ┌────────────────┐  │
+         ↓                ↓  ↓
+[Query Clinical Trials] [Preprocess Criteria]
+         ↓                ↓
+    [NER on Criteria] → [Criteria Terminology Mapping]
+                             ↓
+                       [% Match Score]
+                             ↓
+                       [Is Patient Eligible?]
